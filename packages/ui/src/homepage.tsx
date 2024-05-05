@@ -1,15 +1,19 @@
-export const Homepage = ({ children }: { children: React.ReactNode }) => {
+import { Appbar } from "./appbar";
+import { HomepageCard } from "./homepagecard";
+import { Sidebar } from "./sidebar";
+
+export const Homepage = () => {
   return (
-    <div>
-      {children}
-      <div className="border rounded-xl  shadow mx-4 my-8 h-[600px] flex flex-col justify-between">
-        <div className="ml-4 mt-4">
-          <div className="text-2xl text-gray-500">Balance</div>
-          <div className="text-4xl">$20,000</div>
+    <div className='w-full h-screen'>
+      <Appbar></Appbar>
+      <div className='grid grid-cols-10 h-full'>
+        <div className='grid col-span-2 border-r-2 '>
+          <Sidebar></Sidebar>
         </div>
-        <div className="ml-4 my-4 flex justify-center gap-2">
-          <button className="bg-blue-500 p-2 text-white font-semibold rounded-xl hover:bg-blue-600">Add Money</button>
-          <button className="bg-red-600 p-2 text-white font-semibold rounded-xl hover:bg-red-700">Withdraw Money</button>
+        <div className='grid col-span-8 h-full'>
+          <HomepageCard>
+            <h1 className='ml-4 mt-8 mb-4 text-5xl text-blue-500 font-semibold'>Good afternoon, Sathvik Kandadi</h1>
+          </HomepageCard>
         </div>
       </div>
     </div>

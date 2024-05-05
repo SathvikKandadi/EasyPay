@@ -4,6 +4,7 @@
   "private": true,
   "exports": {
 "./homepage": "./src/homepage.tsx",
+"./homepagecard": "./src/homepagecard.tsx",
 "./sidebar": "./src/sidebar.tsx",
 "./appbar": "./src/appbar.tsx",
     "./button": "./src/button.tsx",
